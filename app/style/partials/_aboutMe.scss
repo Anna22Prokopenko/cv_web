@@ -1,0 +1,78 @@
+$about_me: 87vh;
+/* $aboutHeader_height: 26vh; */
+$aboutBody_height: 69vh;
+$aboutFooter_height: 5vh;
+/* $aboutFotoCircle_size: 25vh; */
+$font_size: 2vh;
+$gray_color_text: gray;
+
+.row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.about_me {
+	/* background: pink; */
+	min-height: $about_me;
+	width: 100%;
+	
+}
+
+/* .about_me_cnt {
+	padding: 5vh !important;
+	background-color: white;
+	min-height: $aboutBody_height;
+	font-size: $font_size;
+	font-family: 'EB Garamond', serif;
+		h3, p {
+			font-size: $font_size;
+		}
+		.line {
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+			text-align: center;
+			color: $gray_color_text;
+				&:after, &:before {
+					content: '';
+					display: inline-block;
+					width: 100%;
+					height: 1px;
+					background: gray;
+					z-index: -1;
+					position: relative;
+					vertical-align: middle;
+				}
+				&:after {
+					left: 5vh;
+					margin: 0 -100% 0 0;
+				}
+				&:before {
+					right: 5vh;
+					margin: 0 0 0 -100%;
+				}
+		}
+		.ul_style {
+			margin: 3vh 0;
+				.li_style {
+					margin: 1vh 0;
+				}
+		}
+		.dl-horizontal {
+			dt {
+				width: 20vh;
+				text-align: left;
+			}
+			.dl_style {
+				margin: 1% 0;
+			}
+		}
+		.negative_margin_bottom {
+			margin-bottom: -2vh;
+		}
+		.margin {
+			margin: 3vh 0;
+		}
+} */
+/* .about_me_footer {
+	height: $aboutFooter_height;
+} */

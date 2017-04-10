@@ -1,0 +1,157 @@
+$progressBar_height: 25vh;
+$circle_bg: #d6dadc;
+$circle_color_bg: #cbddef;
+$under_circle_title_color: #4f6cb1;
+/* $circle_cnt_height: 20%; */
+$circle_size: 17vh;
+$radial_progress_size: 19vh;
+$circle_margin: 0 7vh 35vh 7vh;
+$inset_size: 15vh;
+$inset-color: #fff;
+$percentage_font_size: 4vh;
+$percentage_text_width: 20vh;
+$font_family: 'Amatic SC', cursive;
+
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+.progressBar_cnt {
+	width: 100%;
+	min-height: $progressBar_height;
+	/* background-color: pink; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+.radial-progress {
+	width: $radial_progress_size;
+	height: $radial_progress_size;
+	background-color: #fff;
+	margin: $circle_margin;
+	display: inline-block;
+	border-radius: 50%;
+	box-shadow: #cecece -3px 4px 0, #e2e2e2 -2px 2px 0, #dfdfdf -3px 3px 0, #d3d3d3 -4px 4px 0, #d6d6d6 -5px 5px 0, #ddd -6px 6px 0, #dfdfdf -7px 7px 0, #e2e1e1 -8px 8px 0, #e6e6e6 -9px 9px 0, #e9e9e9 -10px 10px 0, #e9e9e9 -11px 11px 0, #e9e9e9 -12px 12px 0, #eaeaea -13px 13px 0, #eaeaea -14px 14px 0, #eaeaea -15px 15px 0, #ebebeb -16px 16px 0, #ebebeb -17px 17px 0, #ebebeb -18px 18px 0, #ececec -19px 19px 0, #ececec -20px 20px 0, #ececec -21px 21px 0, #ededed -22px 22px 0, #ededed -23px 23px 0, #ededed -24px 24px 0, #eee -25px 25px 0, #eee -26px 26px 0, #eee -27px 27px 0, #efefef -28px 28px 0, #efefef -29px 29px 0, #efefef -30px 30px 0, #f0f0f0 -31px 31px 0, #f0f0f0 -32px 32px 0, #f0f0f0 -33px 33px 0, #f1f1f1 -34px 34px 0, #f1f1f1 -35px 35px 0, #f1f1f1 -36px 36px 0, #f2f2f2 -37px 37px 0, #f2f2f2 -38px 38px 0, #f2f2f2 -39px 39px 0, #f3f3f3 -40px 40px 0, #f3f3f3 -41px 41px 0, #f3f3f3 -42px 42px 0, #f4f4f4 -43px 43px 0, #f4f4f4 -44px 44px 0, #f4f4f4 -45px 45px 0, #f5f5f5 -46px 46px 0, #f5f5f5 -47px 47px 0, #f5f5f5 -48px 48px 0, #f6f6f6 -49px 49px 0, #f6f6f6 -50px 50px 0, #f6f6f6 -51px 51px 0, #f7f7f7 -52px 52px 0, #f7f7f7 -53px 53px 0, #f7f7f7 -54px 54px 0, #f8f8f8 -55px 55px 0, #f8f8f8 -56px 56px 0, #f8f8f8 -57px 57px 0, #f9f9f9 -58px 58px 0, #f9f9f9 -59px 59px 0, #f9f9f9 -60px 60px 0, #fafafa -61px 61px 0, #fafafa -62px 62px 0, #fafafa -63px 63px 0, #fbfbfb -64px 64px 0, #fbfbfb -65px 65px 0, #fbfbfb -66px 66px 0, #fcfcfc -67px 67px 0, #fcfcfc -68px 68px 0, #fcfcfc -69px 69px 0, #fdfdfd -70px 70px 0, #fdfdfd -71px 71px 0, #fdfdfd -72px 72px 0, #fefefe -73px 73px 0, #fefefe -74px 74px 0, #fefefe -75px 75px 0, #fff -76px 76px 0;
+		.circle {
+			margin-left: ($radial_progress_size - $circle_size)/2;
+			margin-top: ($radial_progress_size - $circle_size)/2;
+			.mask, .fill {
+				width: $circle_size;
+				height: $circle_size;
+				position: absolute;
+				border-radius: 50%;
+				-webkit-backface-visibility: hidden;
+				-webkit-transition: all 1s ease-out;
+				-moz-transition: all 1s ease-out;
+				-o-transition: all 1s ease-out;
+				transition: all 1s ease-out;
+			}
+			.mask {
+				clip: rect(0px, $circle_size, $circle_size, $circle_size/2);
+					.fill {
+						clip: rect(0px, $circle_size/2, $circle_size, 0px);
+						background-color: $circle_color_bg;
+					}
+					.fix {
+						background-color: $circle_color_bg;
+					}
+			}
+		}
+		.inset {
+			width: $inset_size;
+			height: $inset_size;
+			position: absolute;
+			margin-left: ($radial_progress_size - $inset_size)/2;
+			margin-top: ($circle_size - $inset_size)/2;
+			background-color: $inset_color;
+			border-radius: 50%;
+				.percentage {
+					height: $percentage_font_size;
+					width: $percentage_text_width;
+					overflow: hidden;
+					position: absolute;
+					top: ($inset_size - $percentage_font_size) / 2;
+					left: ($inset_size - $percentage_text_width) / 2;
+					line-height: 1;
+						.numbers {
+							margin-top: -$percentage_font_size;
+							webkit-transition: all 1s ease-out;
+							-moz-transition: all 1s ease-out;
+							-o-transition: all 1s ease-out;
+							transition: all 1s ease-out;
+								span {
+									width: $percentage_text_width;
+									display: inline-block;
+									vertical-align: top;
+									text-align: center;
+									/* font-weight: 1000; */
+									font-size: $percentage_font_size;
+									font-family: $font_family;
+									color: black;
+								}
+						}
+				}
+		}	
+		.text_underCircle {
+			display: inline-block;
+			text-align: center;
+			margin-left: ($radial_progress_size / 2) / ($radial_progress_size / 2);
+			width: $radial_progress_size;
+			overflow: hidden;
+			margin-top: $radial_progress_size;
+			font-family: $font_family;
+			font-size: $percentage_font_size - 2;
+			color: $under_circle_title_color;
+		}
+		.ul {
+			list-style: none;
+			text-align: left;
+			margin-top: $circle_size + 5;
+			margin-left: -15%;
+			white-space: nowrap;
+			width: 170%;
+				.bold {
+					font-weight: bold;
+					color: #4f6cb1;
+				}
+				li {
+					text-align: left;
+					padding-top: 10px;
+					margin: 0 10%;
+					text-transform: none;
+					font-variant: small-caps;
+					font: 400 100% 'Open Sans';
+					color: #40526f;
+					border-bottom: 1px solid #f1f1f1;
+					overflow: hidden;
+					-ms-text-overflow: ellipsis;
+					-o-text-overflow: ellipsis;
+					text-overflow: ellipsis;
+
+				}
+		}
+}
+
+$i: 0;
+$increment: 180deg / 100;
+
+@for $i from 0 through 100 {
+	&[data-progress="#{$i}"] {
+			.circle {
+				.mask.full, .fill {
+					-webkit-transform: rotate($increment * $i);
+					-ms-transform: rotate($increment * $i);
+					transform: rotate($increment * $i);
+				}	
+				.fill.fix {
+					-webkit-transform: rotate($increment * $i * 2);
+					-ms-transform: rotate($increment * $i * 2);
+					transform: rotate($increment * $i * 2);
+				}
+			}
+			.inset .percentage .numbers {
+				width: $i * $percentage_text_width + $percentage_text_width;
+			}
+	}
+}

@@ -1,0 +1,68 @@
+/* File: responsive.css */
+	@media all and (max-width:1550px){
+		body{font-size:95%;}
+		.timeline article{width:40%;}
+		.timeline article:last-of-type h2:before,.timeline article h2:before{width:80%;}
+		.timeline p,.timeline ol{width:80%;}
+	}
+	@media all and (max-width:1380px){
+		.timeline article{width:40%;}
+		.timeline article:last-of-type h2:before,.timeline article h2:before{width:90%;}
+		.timeline p,.timeline ol{width:90%;}
+	}
+	@media all and (max-width:1270px){
+		body{font-size:92%;}
+		.timeline article{width:42%;}
+	}
+	@media all and (max-width:1100px){
+		#timeline{font-size:90%;}
+		.timeline article{width:48%;}
+		.timeline canvas{visibility:hidden;}
+	}
+/* 	@media all and (max-width:1020px) and (orientation:portrait){
+		#main{font-size:110%;min-height:80%;height:80%}
+		#main .world{left:-75%;top:-3%}
+	} */
+/* 	@media all and (max-width:1020px) and (orientation:landscape){
+		#main{font-size:100%}
+		#main .world{left:-75%;top:-5%}
+	} */
+/* 	@media all and (max-width:1020px){
+		#about{font-size:90%}
+		#about #sql-query{font-size:90%}
+		section.projects{font-size:90%}
+		#projs{font-size:90%}
+	} */
+	@media all and (max-width:850px){
+		.title h1{font-size:500%;}
+		.timeline{font-size:110%;}
+		.timeline article{width:49%;}
+		.timeline h2{font-size:350%;}
+	}
+/* 	@media all and (max-width:780px){
+		#main{font-size:90%}
+	} */
+	@media all and (max-width:650px){
+		.title:before{height:2px;}
+		.title h1{font-size:350%;}
+		.timeline p,.timeline ol{width:95%;}
+		.timeline h2{margin-bottom:5%;}
+		.timeline article{width:100%;padding:0 3%;}
+		.timeline article:last-of-type h2:before,.timeline article h2:before{width:100%;}
+		.timeline article:first-of-type{float:none;text-align:justify;}
+		.timeline article:first-of-type p{float:none;}
+		.timeline article:first-of-type figure{border-left:7px solid #d8e6f5;padding-left:10px;border-right:none;padding-right:0;}
+		.timeline article:last-of-type{float:none;text-align:justify;}
+	}
+	@media all and (max-width:450px){
+		body{font-size:80%}
+		.title:before{top:32%}
+		.timeline p, .timeline ol{font-size:140%}
+	}
+@media only screen and (max-device-width:450px){
+	.timeline p, .timeline ol, .timeline h6 {font-size:140%}
+	.radial-progress .ul li {font-size:200%}
+}
+/* 	@media all and (max-width:360px){
+		#main{font-size:80%}
+	} */

@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400|Raleway:400);
+
+$left_h2_color: #b2cde9;
+$left_h6_color: #0090F5;
+$left_line_color: #cbddef;
+$border_left: #d8e6f5;
+$right_h2_color: #c6e0aa;
+$right_h6_color: #40aa00;
+$right_line_color: #d8efc6;
+$border_right: #d9eacb;
+$text_color: #2C2C2C;
+$border_width: 7px;
+$border_padding: 10px;
+$article_width: 38%;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    color: $text_color;
+    min-width: 600px;
+    height: 100%;
+    background: white;
+    font: 400 1em 'Lato';
+    -webkit-font-smoothing: antialiased;
+}
+
+#timeline {
+    padding-top: 10%;
+}
+
+.timeline {
+    height: 100%;
+    position: relative;
+		canvas {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		figcaption {
+			font: 400 160% 'Lato';
+			text-transform: uppercase;
+			-webkit-text-stroke: .25px;
+		}
+		h2 {
+			font: 400 400% 'Raleway';
+			margin-bottom: 15%;
+			color: $left_h2_color;
+			position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: -5%;
+					background-color: $left_line_color;
+					height: 15%;
+					min-height: 5px;
+					max-height: 12px;
+					width: 70%;
+					left: auto;
+					right: 0;
+					-webkit-transition: width 1s;
+					-moz-transition: width 1s;
+					-o-transition: width 1s;
+					transition: width 1s;
+				}
+		}
+		h6 {
+			color: $left_h6_color;
+			font: 400 80% Tahoma;
+		}     
+		p, ol {
+			font: 400 95% 'Raleway';
+			padding: 3px 0 20px 0;
+			color: #575757;
+			text-align: justify;
+			width: 70%;
+		} 
+		ol {
+			list-style: disc;
+			margin-top: -20px;
+			padding-left: 40px;
+		}
+		figure {
+			float: right;
+			width: 100%;
+			margin: 0 0 15px 0;
+			border-left: $border_width solid $border_right;
+			padding-left: $border_padding;
+			border-right: unset;
+			padding-right: unset;
+		}
+
+    article {
+        position: relative;
+        width: $article_width;
+        overflow: hidden;
+        margin-bottom: 100px;
+			&:first-of-type {
+				float: left;
+				text-align: right;
+					p, figure {
+						float: right;
+					}
+					figure {
+						border-right: $border_width solid $border_left;
+						padding-right: $border_padding;
+						border-left: unset;
+						padding-left: unset;
+					}
+			}
+			&:last-of-type {
+				float: right;
+				text-align: left;
+					h2 {
+						color: $right_h2_color;
+							&:before {
+								background-color: $right_line_color;
+								width: 70%;
+								left: 0;
+								right: auto;
+							}
+					}
+					figure:first-of-type {
+						opacity: .35;
+					}
+					h6, a {
+						color: $right_h6_color;
+					}
+					a:hover {
+						color: #95D40D;
+					}
+			}
+    }
+}
+
+
