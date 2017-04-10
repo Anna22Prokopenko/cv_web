@@ -1,6 +1,6 @@
 //= ../../libs/jquery/dist/jquery.min.js
 //= ../../libs/bootstrap/dist/js/bootstrap.min.js
-
+//= partials/particle_script.js
 //= partials/particle.js
 //= partials/progressBar.js
 //= partials/perehod.js
